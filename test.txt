@@ -1,1 +1,196 @@
-this ismy first test file
+#1. Write a program to perform input/output of all basic types
+input_number = int(input("Enter number:"))
+print("Number is ", input_number)
+
+input_float = float(input("Enter decimal:"))
+print("Decimal is ",input_float)
+
+input_string = input("Enter string:")
+print("String is " + input_string)
+
+# input two numbers space separated
+num1, num2 = map(int, input("Enter two numbers space separated").split())
+print("The two numbers are ", num1, num2)
+
+# input two numbers one below another
+number1 = int(input("Enter number1:"))
+number2 = int(input("Enter number2:"))
+print("The two numbers are ", number1, number2)
+#------------------------------------------------------------------------------------
+
+2.#write aprogram to enter two numbers and find their sum:
+a = int(input("enter first number: "))
+b = int(input("enter second number: "))
+
+sum = a + b
+
+print("sum:", sum)
+#------------------------------------------------------------------------------------------
+
+3.#write a program to enter two numbers and perform all arithmetic operations:
+num1 = int(input('Enter First number: '))
+num2 = int(input('Enter Second number '))
+add = num1 + num2
+dif = num1 - num2
+mul = num1 * num2
+div = num1 / num2
+floor_div = num1 // num2
+power = num1 ** num2
+modulus = num1 % num2
+print('Sum of ',num1 ,'and' ,num2 ,'is :',add)
+print('Difference of ',num1 ,'and' ,num2 ,'is :',dif)
+print('Product of' ,num1 ,'and' ,num2 ,'is :',mul)
+print('Division of ',num1 ,'and' ,num2 ,'is :',div)
+print('Floor Division of ',num1 ,'and' ,num2 ,'is :',floor_div)
+print('Exponent of ',num1 ,'and' ,num2 ,'is :',power)
+print('Modulus of ',num1 ,'and' ,num2 ,'is :',modulus)
+#------------------------------------------------------------------------------------------------
+
+4.#write a program to enter lenghth and breadth of a rectangle and find its perimeter:
+length = float(input('Please Enter the Length of a Triangle: '))
+width = float(input('Please Enter the Width of a Triangle: '))
+
+# calculate the perimeter
+perimeter = 2 * (length + width)
+
+print("Perimeter of a Rectangle using", length, "and", width, " = ", perimeter)
+#------------------------------------------------------------------------------------------
+5.#write a program to enter lenghth and breadth of a rectangle and find its area:
+
+
+width = float(input('Please Enter the Width of a Rectangle: '))
+height = float(input('Please Enter the Height of a Rectangle: '))
+
+# calculate the area
+Area = width * height
+print("\n Area of a Rectangle is: %.2f" %Area)
+#-----------------------------------------------------------------------------------------------------
+
+6.#write a program to enteer radius of circle and find its diameter,circumference and area:
+PI = 3.14
+radius = float(input(' Please Enter the radius of a circle: '))
+
+diameter = 2 * radius
+circumference = 2 * PI * radius
+area = PI * radius * radius
+
+print(" \nDiameter Of a Circle = %.2f" %diameter)
+print(" Circumference Of a Circle = %.2f" %circumference)
+print(" Area Of a Circle = %.2f" %area)
+#-------------------------------------------------------------------------------------------------------
+7.#write a program to enter length in centimeter and convert into meter and kilometer:
+cm = 1000;
+
+# Converting centimeter
+# into meter and kilometer
+meter = cm / 100.0;
+kilometer = cm / 100000.0;
+
+# Driver Code
+print("Length in meter = ",
+      meter, "m");
+print("Length in Kilometer = ",
+      kilometer, "km");
+#-------------------------------------------------------------------------------------------
+
+8.#program to enter temperature in celsius and convert into fahrenhiet:
+celsius = float(input("Enter temperature in celsius: "))
+fahrenheit = (celsius * 9/5) + 32
+print('%.2f Celsius is: %0.2f Fahrenheit' %(celsius, fahrenheit))
+#----------------------------------------------------------------------------------------------
+
+9.#program to enter temperature in fahrenhiet and convert into celsius:
+fahrenheit = float(input("Enter temperature in fahrenheit: "))
+celsius = (fahrenheit - 32) * 5/9
+print('%.2f Fahrenheit is: %0.2f Celsius' %(fahrenheit, celsius))
+#---------------------------------------------------------------------------------------------------
+
+10.#program to convert days into years,days and months:
+DAYS_IN_WEEK = 7
+def find(number_of_days):
+    year = int(number_of_days / 365)
+    week = int((number_of_days % 365) /
+               DAYS_IN_WEEK)
+    days = (number_of_days % 365) % DAYS_IN_WEEK
+
+    print("years = ", year,
+          "\nweeks = ", week,
+          "\ndays = ", days)
+    #-------------------------------------------------------------------------------------------------
+11.#write a program to find power of any number x^y:
+n = 1
+for i in range(1, 5):
+    n = 3 * n
+
+print("The value of 3**4 is : ", end="")
+print(n)
+#-------------------------------------------------------------------------------------
+12.#write a program to enter any number and find its square root:
+number = int(input("enter a number: "))
+sqrt = number ** 0.5
+print("square root:", sqrt)
+#------------------------------------------------------------------------------
+13.#write a program to enter two anglesof triangle and find third angle:
+a = float(input('Please Enter the First Angle of a Triangle: '))
+b = float(input('Please Enter the Second Angle of a Triangle: '))
+
+# Finding the Third Angle
+c = 180 - (a + b)
+
+print("Third Angle of a Triangle = ", c)
+14.#.Write a program to enter the base and height of a triangle and find its area
+
+base, height = map(float, input("Enter base & height: ").split())
+
+def find_area(b, h):
+  return (b*h)/2
+
+result = find_area(base, height)
+print("Area of triangle is ", result)
+
+#--------------------------------------------------------------------------------------------------
+#15.Write a program to find the area of an equilateral triangle
+
+import math
+
+side = float(input("Enter the side: "))
+
+def find_area_of_triangle(a):
+  return(round(((1/4) * math.sqrt(3) * (a**2)), 2))
+
+result = find_area_of_triangle(side)
+print("Area of equilateral triangle is ", result)
+
+#--------------------------------------------------------------------------------------------------
+#16.Write a program to enter marks of five subjects and calculate total, average & percentage
+
+mark1, mark2, mark3, mark4, mark5 = map(float, input("Enter 5 subject marks: ").split())
+
+def perform_analysis(m1, m2, m3, m4, m5):
+  total = m1+m2+m3+m4+m5
+  avg = total/5
+  percentage = (total/500)*100
+  return {"total": total, "avg": avg, "percentage": percentage}
+
+result = perform_analysis(mark1, mark2, mark3, mark4, mark5)
+print("Total is ", result["total"], " avearage is ", result["avg"], " percentage is ", result["percentage"])
+
+#--------------------------------------------------------------------------------------------------
+#17.Write a program to enter P, T & R and calculate simple interest
+
+principal, interest, time = map(float, input().split())
+
+def find_simple_interest(p, t, r):
+  print(round((p * t * r) / 100, 2))
+
+find_simple_interest(principal, time, interest)
+
+#--------------------------------------------------------------------------------------------------
+#18.Write a program to enter P, T & R and calculate compound interest
+
+principal, interest, time = map(float, input().split())
+
+def find_compound_interest(p, t, r):
+  print(p*(pow((1+r/100),t)))
+find_compound_interest(principal, time, interest)
+
